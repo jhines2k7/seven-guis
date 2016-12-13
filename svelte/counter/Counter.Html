@@ -1,0 +1,39 @@
+<style>
+	.button {
+	    background-color: #4CAF50; /* Green */
+	    border: none;
+	    color: white;
+	    padding: 15px 32px;
+	    text-align: center;
+	    text-decoration: none;
+	    display: inline-block;
+	    font-size: 16px;
+	    border-radius: 4px;
+	    transition-duration: 0.4s;
+	}
+
+	.bordered-button {
+		background-color: white;
+    	color: black;
+    	border: 2px solid #4CAF50; /* Green */
+	}
+
+	.button:hover {
+	    background-color: #4CAF50; /* Green */
+	    color: white;
+	}
+</style>
+
+{{count}}
+
+<button class="button bordered-button" on:click='set({ count: count + 1 })'>Count</button>
+
+<script>
+	export default {
+		data() {
+			return {
+				count: 0
+			};
+		}
+	};
+</script>
