@@ -100,13 +100,13 @@
 
 		methods: {
 			increase() {
-				const count = this.get('count') + 1;				
-				this.set( {count: count} );
+				const count = this.get('count');				
+				this.set( {count: count + 1} );
 			},
 
 			decrease() {				
-				const count = this.get('count') - 1;
-				this.set( {count: count} );
+				const count = this.get('count');
+				this.set( {count: count - 1} );
 			}
 		}
 	};
