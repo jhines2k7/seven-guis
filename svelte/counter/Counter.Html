@@ -53,6 +53,8 @@
     	display: flex;
     	align-items: center;
     	justify-content: center;
+	  	color: #9FCC56;
+	  	font-size: x-large;
   	}
 
   	.header p {
@@ -71,6 +73,11 @@
   	.content span {
   		margin: 0 30px 0 0;
   	}
+
+  	button {
+  		margin: 0 10px 0 0;
+  	}
+
 </style>
 
 <div class="header">
@@ -79,15 +86,29 @@
 <div class="content">
 	<span>{{count}}</span>
 
-	<button class="button" on:click='set({ count: count + 1 })'>Count</button>
+	<button class="button" on:click='increase()'>Increase</button>
+	<button class="button" on:click='decrease()'>Decrease</button>
+
 </div>
 
 <script>
 	export default {
-		data() {
+		data: () => {
 			return {
 				count: 0
 			};
-		}
+		},
+
+		methods: {}
+
+		// methods: {
+		// 	increase() { 
+		// 		this.set(count: 1); 
+		// 	},
+			
+		// 	decrease() { 
+		// 		this.set(count: 1); 
+		// 	}
+		// }
 	};
 </script>
