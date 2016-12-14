@@ -44,12 +44,24 @@
 	  -o-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
 	  transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
 	}
-	
+
+	.header {
+    	background-color: #707070;
+    	height: 40px;
+  	}
+
+  	.content {
+    	background-color: #e0e0e0;
+		height: 100px;
+  	}	
 </style>
 
-<span>{{count}}</span>
+<div class="header"><p>Counter</p></div>
+<div class="content">
+	<span>{{count}}</span>
 
-<button class="button" on:click='set({ count: count + 1 })'>Count</button>
+	<button class="button" on:click='set({ count: count + 1 })'>Count</button>
+</div>
 
 <script>
 	export default {

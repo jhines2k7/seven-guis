@@ -4,17 +4,7 @@
   <title>My first Svelte app</title>
 </head>
 <style>
-  .header {
-    background-color: #707070;
-    height: 40px;
-  }
-
-  .content {
-    background-color: #e0e0e0;
-    height: 100px;
-  }
-
-  .container {
+  main {
     width: 200px;
   }
 
@@ -27,14 +17,13 @@
 <link rel="stylesheet" type="text/css" href="reset.css">
 
 <body>
-  <div class="container">
-      <div class="header"><p>Counter</p></div>
-      <div class="content"></div>
-  </div>  
+  
+  <main></main>
+
   <script src='Counter.js'></script>
   <script>
     new Counter({
-      target: document.querySelector( '.content' )
+      target: document.querySelector( 'main' )
     });
   </script>
 </body>
