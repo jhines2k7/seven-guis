@@ -99,16 +99,16 @@
 			};
 		},
 
-		methods: {}
+		methods: {
+			increase() {
+				const count = this.get('count') + 1;				
+				this.set( {count: count} );
+			},
 
-		// methods: {
-		// 	increase() { 
-		// 		this.set(count: 1); 
-		// 	},
-			
-		// 	decrease() { 
-		// 		this.set(count: 1); 
-		// 	}
-		// }
+			decrease() {				
+				const count = this.get('count') - 1;
+				this.set( {count: count} );
+			}
+		}
 	};
 </script>
