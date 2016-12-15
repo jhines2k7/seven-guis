@@ -36,7 +36,7 @@
 	<p>Temperature Converter</p>
 </div>
 <div class="content">
-	<input on:enter="calculateFahrenheit()" value="{{ celsius === 0 ? '' : celsius }}" placeholder="0">
+	<input on:enter="calculateFahrenheit()" value="{{ celsius === 0 ? '' : celsius }}" type="text" placeholder="0">
 	<span>Celsius =</span>
 	<input value="{{ fahrenheit === 0 ? '' : fahrenheit }}" type="text" placeholder="0">
 	<span>Fahrenheit</span>
