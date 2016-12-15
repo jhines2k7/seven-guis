@@ -36,19 +36,30 @@
 	<p>Temperature Converter</p>
 </div>
 <div class="content">
-	<input bind:value='name' type="text" placeholder="0">
+	<input on:input="calculateFahrenheit()" bind:value='celsius' type="text" placeholder="0">
 	<span>Celsius =</span>
-	<input bind:value='name' type="text" placeholder="0">
+	<input bind:value='fahrenheit' type="text" placeholder="0">
 	<span>Fahrenheit</span>
 	
 </div>
 
 <script>
 	export default {
-		data: () => {
+		data() {
 			return {
-				name: 'James'
-			};
+				celsius: 0,
+				fahrenheit: 0	
+			}			
+		},
+		
+		methods: {
+			calculateFahrenheit() {
+				const celsius = this.get('celsius');
+
+				const fahrenheit = celsius * (9/5) + 32;
+
+				this.set({ fahrenheit: fahrenheit });
+			}
 		}
 	};
 </script>
