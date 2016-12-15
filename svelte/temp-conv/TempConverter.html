@@ -44,6 +44,23 @@
 </div>
 
 <script>
+	const ENTER_KEY = 13;
+	const ESCAPE_KEY = 27;
+
+	function keyEvent ( code ) {
+		return function ( node, callback ) {
+			function keydownHandler ( event ) {
+				if ( event.which === code ) callback.call( this, event );
+			}
+			node.addEventListener( 'keydown', keydownHandler, false );
+			return {
+				teardown () {
+					node.removeEventListener( 'keydown', keydownHandler, false );
+				}
+			};
+		};
+	}
+	
 	export default {
 		data() {
 			return {
@@ -60,6 +77,11 @@
 
 				this.set({ fahrenheit: fahrenheit });
 			}
+		},
+
+		events: {
+			enter: keyEvent( ENTER_KEY ),
+			escape: keyEvent( ESCAPE_KEY )
 		}
 	};
 </script>
