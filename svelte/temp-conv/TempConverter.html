@@ -36,9 +36,9 @@
 	<p>Temperature Converter</p>
 </div>
 <div class="content">
-	<input type="text">
+	<input bind:value='name' type="text" placeholder="0">
 	<span>Celsius =</span>
-	<input type="text">
+	<input bind:value='name' type="text" placeholder="0">
 	<span>Fahrenheit</span>
 	
 </div>
@@ -46,7 +46,9 @@
 <script>
 	export default {
 		data: () => {
-			return {};
+			return {
+				name: 'James'
+			};
 		}
 	};
 </script>
