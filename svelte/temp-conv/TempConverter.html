@@ -52,7 +52,9 @@
 			function keydownHandler ( event ) {
 				if ( event.which === code ) callback.call( this, event );
 			}
+			
 			node.addEventListener( 'keydown', keydownHandler, false );
+			
 			return {
 				teardown () {
 					node.removeEventListener( 'keydown', keydownHandler, false );
@@ -60,7 +62,7 @@
 			};
 		};
 	}
-	
+
 	export default {
 		data() {
 			return {
