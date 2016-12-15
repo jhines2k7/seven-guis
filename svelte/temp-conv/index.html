@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Temperature Converter</title>
+
+    <style>
+      main {
+        display: inline-block;
+        margin: 20px auto 0 auto;
+      }
+
+      .header p {
+        font-family: sans-serif;
+      }
+
+    </style>
+
+<link rel="stylesheet" type="text/css" href="reset.css">
+</head>
+
+<body>
+
+    <main></main>
+
+    <script src='TempConverter.js'></script>
+    <script>
+        new TempConverter({
+            target: document.querySelector( 'main' )
+        });
+    </script>
+</body>
+</html>

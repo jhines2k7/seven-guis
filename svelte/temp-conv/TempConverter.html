@@ -1,0 +1,48 @@
+<style>
+	.header {
+    	background-color: #c7ff6b;
+    	height: 40px;
+    	border-radius: 10px 10px 0 0;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	  	color: #9FCC56;
+	  	font-size: x-large;
+  	}
+
+  	.content {
+    	background-color: #e4ffb7;
+		height: 100px;
+		border-radius: 0 0 10px 10px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+  	}	
+
+  	.content span {
+  		margin: 0 30px 0 0;
+  		color: #727F5C;
+  		font-size: x-large;
+  		font-family: 'Arial', sans-serif;
+  	}
+
+</style>
+
+<div class="header">
+	<p>Temperature Converter</p>
+</div>
+<div class="content">
+	<input type="text">
+	<span>Celsius =</span>
+	<input type="text">
+	<span>Fahrenheit</span>
+	
+</div>
+
+<script>
+	export default {
+		data: () => {
+			return {};
+		}
+	};
+</script>
