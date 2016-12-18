@@ -1,0 +1,70 @@
+<style>
+	.header {
+    	background-color: #c7ff6b;
+    	height: 40px;
+    	border-radius: 10px 10px 0 0;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	  	color: #9FCC56;
+	  	font-size: x-large;
+	  	font-family: sans-serif;
+  	}
+
+  	.content {
+    	background-color: #e4ffb7;
+		height: 100px;
+		border-radius: 0 0 10px 10px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+  	}	
+
+  	.content span {
+  		margin: 0 15px 0 10px;
+  		color: #727F5C;
+  		font-size: x-large;
+  		font-family: 'Arial', sans-serif;
+  	}
+
+  	.content input:first-of-type {
+  		margin: 0 0 0 15px;
+  	}
+
+	input {
+		display: inline-block;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+		padding: 10px 20px;
+		border: 1px solid #b7b7b7;
+		font: normal 16px/normal 'Arial', sans-serif;
+		color: #727F5C;
+		-o-text-overflow: clip;
+		text-overflow: clip;
+		background: rgba(252,252,252,1);
+		-webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+		box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
+		text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+		-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+		-moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+		-o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+		transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+	}
+
+</style>
+
+<div class="header">
+	<p>Book Flight</p>
+</div>
+
+<div class="content">
+	<button>One-Way Flight</button>
+	<input ref:departDateInput on:enter="calculateFahrenheit(this.value)" type="text" placeholder="0">
+	<input ref:returnDateInput on:enter="calculateCelsius(this.value)" type="text" placeholder="0">
+</div>
+
+<script>
+	
+</script>
