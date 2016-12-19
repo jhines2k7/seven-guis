@@ -184,7 +184,11 @@
 	export default {
 		methods: {
 			toggleReturnDateInput(value){
-				if(value === 'return-flight') this.refs.returnDateInput.removeAttribute('disabled');
+				if (value === 'return-flight'){
+					this.refs.returnDateInput.removeAttribute('disabled');
+				} else {
+					this.refs.returnDateInput.setAttribute('disabled', '');
+				}
 			}
 		}
 	}
