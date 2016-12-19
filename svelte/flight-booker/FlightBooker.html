@@ -164,18 +164,28 @@
 
 <div class="content">
 	<div class="styled-select green semi-square">
-		<select name="" id="">
+		<select on:change="toggleReturnDateInput(this.value)" ref:flightTypeSelect>
 			<option value="one-way-flight">One Way Flight</option>
 			<option value="return-flight">Return Flight</option>
 		</select>	
 	</div>
 	
 	<input ref:departDateInput on:enter="calculateFahrenheit(this.value)" type="text" placeholder="Departure Date">
-	<input ref:returnDateInput on:enter="calculateCelsius(this.value)" type="text" placeholder="Return Date">
+	<input ref:returnDateInput 
+		on:enter="calculateCelsius(this.value)" 
+		type="text" 
+		disabled 
+		placeholder="Return Date">
 
 	<button type="button" class="button">Book</button>
 </div>
 
 <script>
-	
+	export default {
+		methods: {
+			toggleReturnDateInput(value){
+				if(value === 'return-flight') this.refs.returnDateInput.removeAttribute('disabled');
+			}
+		}
+	}
 </script>
