@@ -170,7 +170,7 @@
 		</select>	
 	</div>
 	
-	<input ref:departDateInput on:enter="calculateFahrenheit(this.value)" type="text" placeholder="Departure Date">
+	<input ref:departDateInput on:change="validateDateInputs(this.value)" type="text" placeholder="Departure Date">
 	<input ref:returnDateInput 
 		on:enter="calculateCelsius(this.value)" 
 		type="text" 
@@ -189,7 +189,11 @@
 				} else {
 					this.refs.returnDateInput.setAttribute('disabled', '');
 				}
-			}
+			},
+
+            validateDateInputs(value) {
+
+            }
 		}
 	}
 </script>
